@@ -1,0 +1,19 @@
+﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<h2>Product Details</h2>
+
+@foreach (Product product in Model.Products)
+{
+    <div class="product-info">
+        <p><strong>Product ID:</strong> @product.ProductId</p>
+        <p><strong>Name:</strong> @product.Name</p>
+        <p><strong>Description:</strong> @product.Description</p>
+        <p><strong>Price:</strong> @product.Price.ToString("C")</p>
+        <p><strong>Stock:</strong> @product.Stock</p>
+        <p><strong>Category ID:</strong> @product.CategoryId</p>
+    </div>
+    <hr />
+}
